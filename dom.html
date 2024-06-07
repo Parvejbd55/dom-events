@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px; 
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM</h3>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam accusamus ipsum explicabo, perferendis iste hic. Harum optio officia ex debitis libero cumque qui ad nemo! Enim aut at ratione adipisci?</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Recusandae consequatur asperiores porro soluta, optio voluptate ducimus, similique reprehenderit voluptatem architecto saepe obcaecati atque labore explicabo nesciunt quos autem nobis nulla a sequi repellendus facere iusto accusamus! Dignissimos, laborum?</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Modi vitae dolore quo adipisci praesentium illo vel animi culpa, officia nesciunt? Dignissimos quidem libero autem quae porro quisquam necessitatibus provident fuga ut, harum odio illum ducimus amet explicabo? Id.</p>
+            </article>
+        </section>
+        <section>
+            <h3>Exploring DOM</h3>
+            <p id="first">My first paragraph</p>
+            <p>My second paragraph</p>
+        </section>
+    </main>
+    <script>
+        var first = document.getElementById('first');
+        first.style.backgroundColor = 'Yellow';
+        first.style.color = 'green';
+        first.style.fontsize ='40px';
+    </script>
+</body>
+</html>
