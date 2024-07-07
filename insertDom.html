@@ -20,7 +20,7 @@
     <main>
         <section>
             <h3>Exploring DOM</h3>
-            <article>
+            <article id="first-article">
                 <h3>article-1</h3>
                 <p title="I am the most important author" class="author" id="bestSeller">author-1</p>
                 <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam accusamus ipsum explicabo, perferendis iste hic. Harum optio officia ex debitis libero cumque qui ad nemo! Enim aut at ratione adipisci?</p>
@@ -35,24 +35,29 @@
                 <p class="author">author-3</p>
                 <p class="description">Modi vitae dolore quo adipisci praesentium illo vel animi culpa, officia nesciunt? Dignissimos quidem libero autem quae porro quisquam necessitatibus provident fuga ut, harum odio illum ducimus amet explicabo? Id.</p>
             </article>
-        </section>
-        <section>
-            <h3>Exploring DOM</h3>
-            <p id="first">My first paragraph</p>
-            <p>My second paragraph</p>
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>gift item - 1</li>
+                    <li>gift item - 2</li>
+                    <li>gift item - 3</li>
+                    <li>gift item - 4</li>
+                    <li>gift item - 5</li>
+                </ul>
+            </article>
         </section>
     </main>
     <script>
-        document.body.style.backgroundColor = 'lightgreen'
-        var authors = document.querySelectorAll('.special h3');
-        for(var i = 0; i<authors.length; i++){
-            var element = authors[i];
-            // console.log(element.innerHTML);
-            element.innerHTML = 'Lekhok-' + (i + 1);
-            element.setAttribute('title', 'All Author is Lekhok');
-            element.style.backgroundColor = 'lightblue';
-            element.style.margin='10px';
-        }
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by JavaScript';
+        article.appendChild(newParagraph);
+
+        // add one more gift item
+        const ul = document.getElementById('gift-list');
+        const li = document.createElement('li');
+        li.innerHTML = 'Brand new Gift';
+        ul.appendChild(li);
     </script>
 </body>
 </html>
